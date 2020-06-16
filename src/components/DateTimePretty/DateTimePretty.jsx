@@ -3,7 +3,7 @@ import moment from 'moment';
 import DateTime from "../DateTime/DateTime";
 
 function makePrettierDateTime(date) {
-  const publicationDate = moment(date, 'YYYY-MM-DD HH:MM:SS')
+  const publicationDate = moment(date, 'YYYY-MM-DD hh:mm:ss')
   const difference = moment().diff(publicationDate);
   // if less than an hour
   if (difference < 3600000 ) return `${moment().diff(publicationDate, 'minutes')} минут назад`;
